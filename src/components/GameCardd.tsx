@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Plus, Star } from "lucide-react";
 // import characterImg from "../assets/images/ruined-king.svg";
 // import logoImg from "../assets/images/ruined-king-logo.svg";

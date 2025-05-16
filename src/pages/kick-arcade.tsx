@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import RuinedKingCardd from "../components/RuinedKingCardd";
-import RuinedKingCard from "../components/GameCardd";
+// import RuinedKingCardd from "../components/RuinedKingCardd";
+import GameCardd from "../components/GameCardd";
 import GameCard from "../components/GameCard";
 import GameCardModal from "../components/GameCardModal";
 
@@ -24,8 +24,8 @@ const KickArcade = () => {
 
   return (
     <section>
-      <RuinedKingCardd />
-      <RuinedKingCard />
+      {/* <RuinedKingCardd /> */}
+      <GameCardd />
 
       <div className="my-5">
         <p className="text-lg font-semibold mb-5">All Games</p>

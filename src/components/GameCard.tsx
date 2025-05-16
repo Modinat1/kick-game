@@ -28,13 +28,13 @@ export default function GameCard({ data, onClick }: GameCardProps) {
             </p>
 
             {item.name === "Biomutant" && (
-              <div className="absolute bg-[#253253] flex items-center gap-2 top-[5%] right-[5%] rounded-[10px] px-3 py-3">
+              <div className="absolute bg-[#253253] flex items-center gap-2 top-[5%] right-[5%] rounded-[10px] p-2 md:p-3">
                 <UserIcon />
                 <p className="text-xs">2464</p>
               </div>
             )}
 
-            <div className="bg-[#151C2F] rounded-b-3xl flex justify-between items-start px-3 py-5">
+            <div className="bg-[#151C2F] rounded-b-xl flex justify-between items-start px-3 py-5">
               <p className="hidden md:block bg-[#EA3D17] text-xs font-normal p-2 cursor-pointer rounded-[10px]">
                 NEW
               </p>
@@ -45,7 +45,7 @@ export default function GameCard({ data, onClick }: GameCardProps) {
                 {/* Rating stars */}
                 <div className="flex gap-x-3">
                   {[...Array(5)].map((_, i) => (
-                    <HeartIcon key={i} />
+                    <HeartIcon className="size-4" key={i} />
                   ))}
                 </div>
               </div>

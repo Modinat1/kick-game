@@ -253,9 +253,10 @@ export const HamburgerIcon = () => {
   );
 };
 
-export const HeartIcon = () => {
+export const HeartIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      {...props}
       width={18}
       height={19}
       viewBox="0 0 18 19"
@@ -272,9 +273,10 @@ export const HeartIcon = () => {
   );
 };
 
-export const FavoriteIcon = () => {
+export const FavoriteIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      {...props}
       width={20}
       height={19}
       viewBox="0 0 20 19"
