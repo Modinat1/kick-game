@@ -1,0 +1,15 @@
+export const RoutePaths = {
+  ROOT: "/",
+  VERIFICATION: "/verify-no",
+  WELCOME: "welcome",
+  LOGIN: "/login",
+  SIGNUP: "/sign-up",
+  ONBOARDING: "/onboarding",
+  VERIFYOTP: "/verify-otp",
+  KICKARCADE: "/kick-arcade",
+  KICKTRIVIA: "/kick-trivia",
+  LEADERBOARD: "/leader-board",
+  WINCASH: "/win-cash",
+  INVITEAFRIEND: "/invite-a-friend",
+  SUPPORT: "/support",
+};
