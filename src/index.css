@@ -42,6 +42,20 @@ body {
   font-style: normal;
 }
 
+.masked {
+  mask-image: url("/maskTemp.svg");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: top;
+}
+.masked2 {
+  mask-image: url("/maskTemp2.svg");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: top;
+  height: 100svh;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

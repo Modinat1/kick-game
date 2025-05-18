@@ -31,7 +31,8 @@ export default function DashboardLayout() {
             sidebarOpen={sidebarOpen}
             toggleSidebar={toggleSidebar}
           />
-          <main className="p-4 overflow-y-auto flex-1">
+          {/* <main className="p-4 overflow-y-auto flex-1"> */}
+          <main className="overflow-y-auto flex-1">
             <Outlet />
           </main>
         </div>

@@ -1,46 +1,64 @@
-// import React from 'react'
 import FortniteCharacter from "../assets/images/FortniteCharacter.svg";
+
+import mask from "/perfectBg2.webp";
+import Rating from "./Rating";
+import GradientButton from "../shared/button/GradientButton";
 
 const Fortnite = () => {
   return (
-    <div className="relative w-[350px] bg-gradient-to-br from-[#2B2B40] to-[#1A1A2E] p-5 rounded-3xl overflow-hidden text-white shadow-lg">
-      {/* Rating Badge */}
-      <div className="absolute top-[-20px] left-[-20px] w-[120px] h-[120px] rounded-full bg-gradient-to-tr from-[#FF5E5E] via-[#845EC2] to-[#00C9A7] flex items-center justify-center shadow-2xl z-10">
-        <div className="text-4xl font-bold">9,4</div>
-      </div>
+    <>
+      <div className="hidden md:flex h-screen items-center justify-center -mt-10 mb-0">
+        <div className="h-[400px] rounded-xl p-10 md:p-9 xl:py-14 2xl:p-9  shadow-lg text-white flex flex-col justify-between relative rounded-b-2xl ">
+          <div className="absolute left-0 right-0 bottom-0 top-0 rounded-b-2xl overflow-hidden">
+            <img src={mask} alt="Background 1" className="masked2" />
+          </div>
+          {/*Rating in top-left corner  */}
+          <div className="absolute top-0 left-0 md:top-0 md:left-0 lg:top-[-10px] lg:left-[-10px] 2xl:top-0 2xl:left-[1px]">
+            <Rating />
+          </div>
+          <img
+            src={FortniteCharacter}
+            alt="Background 1"
+            className="absolute left-5 xl:left-0 2xl:left-0 h-[100%] w-[400px] md:scale-110 xl:scale-90 2xl:scale-110 md:w-auto -translate-y-[11%]"
+          />
 
-      {/* Character Image */}
-      <img
-        src={FortniteCharacter}
-        alt="Fortnite"
-        className="absolute -top-10 right-[-20px] w-[220px] z-0"
-      />
+          {/* Content overlay */}
+          <div className="relative z-10 flex flex-col h-full">
+            {/* Free to play tag */}
+            <div className="flex justify-end items-center">
+              <span className="bg-[#428194] py-2 px-5 rounded-full text-xs italic">
+                Free to play
+              </span>
+            </div>
 
-      {/* Card Content */}
-      <div className="relative z-10 mt-[150px]">
-        <h2 className="text-2xl font-bold mb-2">Fortnite</h2>
-        <p className="text-sm text-gray-300 mb-4">
-          There's a lot to learn about LoL, so we'll start with the essentials.
-          Explore the guide below for an overview of the most popular game mode.
-        </p>
-
-        {/* Review + Stars */}
-        <div className="text-sm text-gray-400 mb-3">
-          Reviews 10k
-          <span className="text-yellow-400 ml-2">★★★★★</span>
+            {/* Card content */}
+            <div className="h-full flex flex-col justify-end">
+              <div className="flex flex-col gap-2 z-50">
+                <h2 className="text-4xl font-semibold mb-2 drop-shadow-2xl">
+                  Fortnite
+                </h2>
+                <p className="text-xs drop-shadow-2xl">
+                  There's a lot to learn about LoL, so we'll start with the
+                  essentials. Explore the guide below for an overview of the
+                  most popular game mode
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-xs">Reviews 3,4k</span>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    <GradientButton className="whitespace-nowrap" type="button">
+                      play now
+                    </GradientButton>
+                    <GradientButton type="button">+</GradientButton>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Buttons */}
-        <div className="flex gap-2">
-          <button className="px-6 py-2 bg-gradient-to-r from-[#FF005C] to-[#845EC2] rounded-xl text-white font-bold shadow-[0_0_20px_rgba(255,0,92,0.5)]">
-            PLAY NOW
-          </button>
-          <button className="bg-[#ff005c] w-10 h-10 rounded-xl text-xl font-bold flex items-center justify-center shadow-[0_0_15px_rgba(255,0,92,0.4)]">
-            +
-          </button>
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 

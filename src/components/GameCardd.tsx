@@ -1,80 +1,94 @@
-import { Plus, Star } from "lucide-react";
+// import { Star } from "lucide-react";
 // import characterImg from "../assets/images/ruined-king.svg";
 // import logoImg from "../assets/images/ruined-king-logo.svg";
+// import FortniteCharacter from "../assets/images/FortniteCharacter.svg";
 
-export default function RuinedKingCard() {
-  return (
-    // <div className="flex items-center justify-center min-h-screen bg-[#0a0e1a] p-4">
-    <div className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br">
-      {/* <div className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#1a3e3e] to-[#1a3e3e]/80"> */}
-      {/* Background image with character */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-14%20182819-mz4KELyfwZBMQ53cDSxil3DhzeKnu9.png"
-          alt="Ruined King character"
-          // fill
-          className="object-cover"
-          // priority
-        />
-      </div>
+// import masked from "../assets/images/masked.jpg";
+// import GradientButton from "../shared/button/GradientButton";
 
-      {/* Content overlay */}
-      <div className="relative z-10 p-8 flex flex-col h-full min-h-[400px]">
-        {/* Top section with rating and free to play */}
-        <div className="flex justify-between items-start">
-          {/* Rating circle */}
-          <div className="relative">
-            {/* Stars */}
-            <div className="absolute -top-2 -right-2">
-              <div className="relative">
-                <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                <div className="absolute -top-1 -right-4">
-                  <Star className="w-4 h-4 text-yellow-300 fill-yellow-300" />
-                </div>
-                <div className="absolute top-1 -right-8">
-                  <Star className="w-3 h-3 text-yellow-300 fill-yellow-300" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+// const items = [
+//   {
+//     title: "Ruined King",
+//     description:
+//       "There's a lot to learn about LoL, so we'll start with the essentials. Explore the guide below for an overview of the most popular game mode",
+//     ratingBg: "red",
+//     hero: characterImg,
+//     rating: "9,2",
+//   },
+//   {
+//     title: "Fortnite",
+//     description:
+//       "There's a lot to learn about LoL, so we'll start with the essentials. Explore the guide below for an overview of the most popular game mode",
+//     ratingBg: "blue",
+//     hero: FortniteCharacter,
+//     rating: "9,4",
+//   },
+// ];
 
-        {/* Game info section */}
-        <div className="mt-auto">
-          <h1 className="text-5xl font-bold text-white mb-2">Ruined King</h1>
-          <p className="text-gray-200 max-w-md mb-6">
-            There's a lot to learn about LoL, so we'll start with the
-            essentials. Explore the guide below for an overview of the most
-            popular game mode.
-          </p>
+// const GameCardd = () => {
+//   return (
+//     <>
+//       {items.map((item) => (
+//         <div className="h-[400px] w-full rounded-xl p-10 md:p-9 xl:py-14 2xl:p-9  shadow-lg text-white flex flex-col justify-between relative rounded-b-2xl ">
+//           <div className="absolute left-0 right-0 bottom-0 top-0 rounded-b-2xl overflow-hidden">
+//             <img src={masked} alt="Background 1" className="masked" />
+//           </div>
 
-          {/* Reviews and action buttons */}
-          <div className="flex items-center gap-4">
-            <div>
-              <div className="text-white mb-1">Reviews 3,4k</div>
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 text-yellow-300 fill-yellow-300"
-                  />
-                ))}
-              </div>
-            </div>
+//           {/* Rating in top-left corner */}
+//           <div className="absolute top-0 left-0 md:top-0 md:left-0 lg:top-[-10px] lg:left-[-10px] 2xl:top-0 2xl:left-[1px]">
+//             {/* <Rating rating={item.rating} /> */}
+//           </div>
+//           <img
+//             src={item.hero}
+//             alt="Background 1"
+//             className="absolute left-5 xl:left-0 2xl:left-0 h-[100%] w-[400px] md:scale-110 xl:scale-90 2xl:scale-110 md:w-auto -translate-y-[11%]"
+//           />
+//           <img
+//             src={logoImg}
+//             alt="Background 2"
+//             className="absolute h-auto max-w-[400px] right-1 top-8"
+//           />
 
-            {/* Play now button */}
-            <button className="px-8 py-3 bg-gradient-to-r from-[#e5267a] to-[#f23f43] rounded-full text-white font-bold uppercase tracking-wider">
-              Play Now
-            </button>
+//           {/* Content overlay */}
+//           <div className="relative z-10 flex flex-col h-full">
+//             {/* Free to play tag */}
+//             <div className="flex justify-end items-center">
+//               <span className="bg-[#428194] py-2 px-5 rounded-full text-xs italic">
+//                 Free to play
+//               </span>
+//             </div>
 
-            {/* Plus button */}
-            <button className="w-12 h-12 flex items-center justify-center bg-[#e5267a]/20 rounded-full">
-              <Plus className="w-6 h-6 text-[#e5267a]" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    // </div>
-  );
-}
+//             {/* Card content */}
+//             <div className="h-full flex flex-col justify-end">
+//               <div className="flex flex-col gap-2 z-50">
+//                 <h2 className="text-4xl font-semibold mb-2 drop-shadow-2xl">
+//                   {item.title}
+//                 </h2>
+//                 <p className="text-xs max-w-[50%] drop-shadow-2xl">
+//                   {item.description}
+//                 </p>
+//                 <div className="flex items-center gap-3">
+//                   <div className="flex flex-col gap-1">
+//                     <span className="text-xs">Reviews 3,4k</span>
+//                     <div className="flex items-center gap-1">
+//                       <Star />
+//                       <Star />
+//                       <Star />
+//                       <Star />
+//                       <Star />
+//                     </div>
+//                   </div>
+//                   <div className="flex items-center gap-3">
+//                     <GradientButton type="button"> PLAY NOW</GradientButton>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       ))}
+//     </>
+//   );
+// };
+
+// export default GameCardd;
