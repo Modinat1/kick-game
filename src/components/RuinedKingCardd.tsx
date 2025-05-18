@@ -7,7 +7,7 @@ import GradientButton from "../shared/button/GradientButton";
 const RuninedKingCardd = () => {
   return (
     <>
-      <div className="flex items-center justify-center -mt-10 mb-0">
+      <div className="flex items-center justify-center md:-mt-10 -mt-0 mb-0">
         <div className="h-[400px] rounded-xl p-10 md:p-9 xl:py-14 2xl:p-9  shadow-lg text-white flex flex-col justify-between relative rounded-b-2xl ">
           <div className="absolute left-0 right-0 bottom-0 top-0 rounded-b-2xl overflow-hidden">
             <img src={mask} alt="Background 1" className="masked" />
@@ -19,7 +19,7 @@ const RuninedKingCardd = () => {
           <img
             src={monsterReal}
             alt="Background 1"
-            className="absolute left-5 xl:left-0 2xl:left-0 h-[100%] w-[400px] md:scale-110 xl:scale-90 2xl:scale-110 md:w-auto -translate-y-[30%]"
+            className="absolute left-5 xl:left-0 2xl:left-0 h-[100%] w-[400px] md:scale-110 xl:scale-90 2xl:scale-110 md:w-auto md:-translate-y-[30%] -translate-y-[11%]"
           />
           <img
             src={runied}

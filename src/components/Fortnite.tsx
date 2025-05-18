@@ -7,9 +7,10 @@ import GradientButton from "../shared/button/GradientButton";
 const Fortnite = () => {
   return (
     <>
-      <div className="hidden md:flex h-screen items-center justify-center -mt-10 mb-0">
+      <div className="hidden md:flex h-screen items-center justify-center md:-mt-10 -mt-0 mb-0">
         <div className="h-[400px] rounded-xl p-10 md:p-9 xl:py-14 2xl:p-9  shadow-lg text-white flex flex-col justify-between relative rounded-b-2xl ">
           <div className="absolute left-0 right-0 bottom-0 top-0 rounded-b-2xl overflow-hidden">
+            {/* <div className="absolute left-0 right-0 bottom-0 top-0 rounded-b-2xl overflow-hidden"> */}
             <img src={mask} alt="Background 1" className="masked2" />
           </div>
           {/*Rating in top-left corner  */}
